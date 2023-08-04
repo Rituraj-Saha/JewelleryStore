@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".pages.HomeActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cor_home"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp">
+            <!--my add-->
+
+
+           <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/colorWhite"
+                app:expandedTitleMarginStart="48dp"
+               app:layout_scrollFlags="scroll|exitUntilCollapsed"
+               android:background="@color/colorWhite"
+                >
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+                android:background="@color/colorWhite"
+                app:title="Hello Title"
+                app:titleTextColor="@color/colorBalck"
+                >
+              <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_collapseMode="pin"
+                    >
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="2"
+                      android:maxLength="10"
+                      android:padding="5dp"
+                      android:orientation="vertical"
+                      >
+                      <TextView
+                          android:id="@+id/txt_actiontitle"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:layout_weight="2"
+                          android:gravity="center|left"
+                          android:text="BUTCHERY"
+                          android:textColor="@color/colorBalck"
+                          android:textSize="14dp"
+                          android:textStyle="bold"
+                          android:paddingBottom="5dp"
+                          />
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:id="@+id/lin_selected_address"
+                          >
+                          <ImageView
+                              android:layout_width="20dp"
+                              android:layout_height="20dp"
+                              android:src="@drawable/ic_baseline_location_on_24"
+                              android:padding="1dp"
+                              />
+
+                          <TextView
+                              android:id="@+id/selected_address"
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:text="address"
+                              android:textColor="@color/colorGrey2"
+                              android:layout_marginStart="1dp"
+                              android:padding="1dp"
+                              android:visibility="visible"
+                              />
+                      </LinearLayout>
+
+
+                  </LinearLayout>
+
+                  <ImageView
+                      android:id="@+id/icon_search"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:src="@drawable/ic_search"
+                      android:visibility="invisible"
+                      android:layout_marginRight="15dp"
+                      />
+
+                    <RelativeLayout
+                        android:id="@+id/rlt_noti"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_noti"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            app:tint="@color/colorPrimary"
+                            android:src="@drawable/ic_notification" />
+
+                        <TextView
+                            android:id="@+id/txt_noti"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/circale_card"
+                            android:backgroundTint="#000"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:text="1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10dp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlt_cart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_cart"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            app:tint="@color/colorPrimary"
+                            android:src="@drawable/ic_cart" />
+
+                        <TextView
+                            android:id="@+id/txt_countcard"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/circale_card"
+                            android:backgroundTint="#000"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:text="10"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+
+               <!--margin top was 38dp-->
+               <LinearLayout
+                   android:id="@+id/lin_rel_search"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="45dp"
+                   >
+
+               <RelativeLayout
+                   android:id="@+id/rlvSearch"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:paddingBottom="1dp"
+                   app:layout_collapseMode="parallax"
+                   android:background="@color/colorWhite"
+                   app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                   <LinearLayout
+                       android:id="@+id/lvl_hidecart"
+                       android:layout_width="match_parent"
+                       android:layout_height="70dp"
+                       android:layout_weight="1"
+                       android:gravity="center|left"
+                       android:orientation="horizontal">
+
+                       <LinearLayout
+                           android:id="@+id/lvl_actionsearch"
+                           android:layout_width="match_parent"
+                           android:layout_height="42dp"
+                           android:layout_marginLeft="20dp"
+                           android:layout_marginRight="20dp"
+                           android:layout_weight="1"
+                           android:backgroundTint="#f8f8f8"
+                           android:background="@drawable/rounded_search"
+                           android:elevation="10dp"
+                           android:gravity="center|right"
+                           android:orientation="horizontal">
+
+
+                           <EditText
+                               android:id="@+id/ed_search"
+                               android:layout_width="match_parent"
+                               android:layout_height="40dp"
+                               android:layout_margin="5dp"
+                               android:layout_weight="1"
+                               android:background="@null"
+                               android:drawablePadding="10dp"
+                               android:ems="10"
+                               android:gravity="left|center"
+                               android:hint="Search.."
+                               android:imeOptions="actionSearch"
+                               android:inputType="text"
+                               android:paddingLeft="8dp"
+                               android:textColor="@color/colorGrey1"
+                               android:textColorHint="@color/colorGrey1" />
+
+                           <ImageView
+                               android:id="@+id/img_search"
+                               android:layout_width="50dp"
+                               android:layout_height="match_parent"
+                               android:padding="13dp"
+                               android:background="?android:attr/selectableItemBackgroundBorderless"
+                               android:src="@drawable/ic_search" />
+                       </LinearLayout>
+                   </LinearLayout>
+
+
+               </RelativeLayout>
+               </LinearLayout>
+              <!-- </LinearLayout>-->
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <LinearLayout
+                android:id="@+id/lin_contain_recycl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycl_cat_nav"
+                android:layout_width="match_parent"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:scrollbars="horizontal"
+                android:layout_height="match_parent"
+                android:background="#f2f2f2"
+                app:layout_collapseMode="pin"
+                />
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <!--    <include layout="@layout/content_home" />-->
+
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/lvl_mainhome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".activity.HomeActivity"
+            app:layout_collapseMode="pin"
+            tools:showIn="@layout/app_bar_home">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/fragment_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>
